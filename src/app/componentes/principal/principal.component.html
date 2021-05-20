@@ -1,0 +1,9 @@
+<p>principal works!</p>
+<div *ngIf="iniciado ;else elseTemplate" >
+  <!-- <button  class="btn btn-block btn-danger disabled " id="botonIniciar" >Iniciar</button> -->
+
+</div>
+<ng-template #elseTemplate>
+  <button (click)="iniciar()" class="btn  w-100 btn-danger " id="botonIniciar" >Iniciar</button>
+
+</ng-template>

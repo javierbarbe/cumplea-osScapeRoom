@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  background-color: purple;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+  }
+
+  .crono{
+    font-size: 4em;
+    display: flex;
+    background-color: yellow;
+    align-items: center;align-content: center;
+  }
+  .reloj{
+    margin: auto;
+  }
