@@ -47,6 +47,7 @@ unaVez:Boolean=false;
                   if(this.minuto=='29'&& !this.unaVez){
                     this.unaVez=true;
                     errorS.reproducirMusicaFondo();
+                    // oke
                   }
     } );
     this.reloj= this.cuentaAtras.getReloj();
