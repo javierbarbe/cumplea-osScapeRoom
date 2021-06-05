@@ -3,5 +3,6 @@ hora: string,
 minuto : string,
 segundo: string,
 milisegundo ?: string,
-imagenMinion?:string
+imagenMinion?:string,
+errores?:number
 }

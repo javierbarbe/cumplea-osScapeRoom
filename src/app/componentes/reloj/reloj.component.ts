@@ -26,7 +26,7 @@ unaVez:Boolean=false;
   constructor(private cuentaAtras:CuentaAtrasService, private errorS: ErroresService) {
 
     this.intervalSubs= this.cuentaAtras.getReloj$().subscribe((res:IReloj)=>{
-      console.log("lo suscrito en reloj.component, del observvable devuelto de cuentaAtras.getReloj$",res);
+      // console.log("lo suscrito en reloj.component, del observvable devuelto de cuentaAtras.getReloj$",res);
       this.reloj=res;
                 this.hora= this.reloj.hora;
                 this.minuto=this.reloj.minuto;
@@ -35,7 +35,7 @@ unaVez:Boolean=false;
                 this.numeroMin=this.numeroMin-cantidadErrores;
                 this.segundo=this.reloj.segundo;
                 this.milisegundo=this.reloj.milisegundo;
-                console.log('el minuto que deberia ser tras la resta de errores',this.numeroMin);
+                // console.log('el minuto que deberia ser tras la resta de errores',this.numeroMin);
                   if(this.minuto=='59' && !this.unaVez){
                     errorS.reproducirMusicaFondo();
                     this.unaVez=true;
@@ -51,7 +51,7 @@ unaVez:Boolean=false;
                   }
     } );
     this.reloj= this.cuentaAtras.getReloj();
-    console.log('this.reloj en el constructor reloj.compoennt', this.reloj);
+    // console.log('this.reloj en el constructor reloj.compoennt', this.reloj);
 
 
   }

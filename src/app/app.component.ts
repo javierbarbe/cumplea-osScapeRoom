@@ -1,3 +1,4 @@
+import { LocalStorageService } from './services/local-storage.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'escapeRoom';
+
+  constructor( private lstorage: LocalStorageService){
+// console.log('hay reloj?',lstorage.getLocalStorage('reloj'));
+  }
 }

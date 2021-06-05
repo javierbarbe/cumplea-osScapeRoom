@@ -49,4 +49,7 @@ reproducirMusicaFondo(){
    getCantidadErrores(){
      return this.cantidadErrores;
    }
+   reiniciaErrores(){
+     this.cantidadErrores=0;
+   }
 }

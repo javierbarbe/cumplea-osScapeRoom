@@ -2,3 +2,24 @@
 
 <button (click)=addError()>Add Error</button>
 <button>Quita estado Error</button>
+
+<form [formGroup]="formPrueba1" (ngSubmit)="comprobar()">
+<div class="container-fluid" style="width: 100%;height: 400px;background: yellow;">
+  <div>
+    <input type="radio" name="op1" value="valor1">Respuesta 1
+    <input type="radio" name="op1" value="valor1">Respuesta 2
+    <input type="radio" name="op1" value="valor3">Respuesta 3
+    <input type="radio" name="op1" value="valor4">Respuesta 4
+    <input type="radio" name="op1" value="valor5">Respuesta 5
+  </div>
+  <div>
+    <input type="checkbox" name="numero"  formControlName='opcCheckBox_1' value="numero1"> Num1
+    <input type="checkbox" name="numero2" formControlName='opcCheckBox_2' value="numero2"> Num2
+    <input type="checkbox" name="numero3" formControlName='opcCheckBox_3' value="numero3"> Num3
+    <input type="checkbox" name="numero4" formControlName='opcCheckBox_4' value="numero4"> Num4
+  </div>
+
+
+</div>
+<input type="submit" value="Enviar">
+</form>
