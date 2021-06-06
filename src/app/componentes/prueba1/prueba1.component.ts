@@ -27,6 +27,16 @@ this.formPrueba1= new FormGroup({
 "opcCheckBox_4": new FormControl("", ),
 
 })}
+
+pausarMusicaFondo(){
+  this.errorS.stopMusicaFondo();
+}
+reanudarMusicaFondo(){
+  this.errorS.reproducirMusicaFondo();
+}
+add20errores(){
+  this.errorS.add_n_errores(7);
+}
   addError(){
     console.log("error añadido");
     console.log("antes de añadir hay ", this.errorS.getCantidadErrores()," errores");

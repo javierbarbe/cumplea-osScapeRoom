@@ -1,4 +1,4 @@
-<div class="padre" style="width: 80%; margin: auto;">
+<div class="padre" style="width: 90%; margin: auto;">
   <div class="crono" style=" border: red solid 2px;">
     <!-- <div id="hora" class="reloj"> {{hora}} </div>: -->
     <div id="minutero" class="reloj"> {{minuto}} </div>:
@@ -6,7 +6,6 @@
     <div id="milisecundero" class="reloj">{{milisegundo}}</div>
   </div>
   </div>
-  <div>
-    {{imagenMinion}}
-    <img src="{{imagenMinion}}" width=40 height=40 alt='no se encuentra'>
+  <div style="width: 100%;" class="d-flex justify-content-center align-items-center mt-4">
+    <img id="imagenCambiante" style="width: 80%; border-radius: 10px; border:solid 2px black" src="{{imagenMinion}}"  alt='no se encuentra'>
   </div>

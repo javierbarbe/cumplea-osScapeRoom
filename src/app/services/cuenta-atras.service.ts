@@ -31,7 +31,7 @@ cronometro;
    Relojito=()=>{
      var errores2 =[];
      this.d = document;
-     debugger;
+    //  debugger;
     // const relojLocalStorage:IReloj = this.lstorage.getLocalStorage('reloj');
     var fec = new Date(Date.now());
 
@@ -83,7 +83,7 @@ imagenMinion:string='';
 numeroMin;
 
    cuentaAtras =(fechaLimitePasada:string  ):IReloj=>{
-     debugger;
+    //  debugger;
   console.log("la fecha limite pasada sin nada en el storagae",fechaLimitePasada);
       let fechaLimite2 = new Date(fechaLimitePasada).getTime();
 
@@ -136,19 +136,7 @@ numeroMin;
           let cantidadErrores=this.errorS.getCantidadErrores();
 // debugger;
           this.numeroMin= parseInt(this.minutos);
-          // if(!this.lstorage.getLocalStorage('reloj')){
-          //   console.log(" no hay reloj en local storage");
-          //   cantidadErrores = this.errorS.getCantidadErrores();
-          // }else{
-          //   console.log(" hay reloj en local storage");
-          //   console.log('el reloj',this.reloj);
-          //  cantidadErrores= this.errorS.getCantidadErrores()+this.lstorage.getLocalStorage('reloj').errores;
-          //  console.log('los errores de la sesion ANTES DE  reiniciar',this.errorS.getCantidadErrores());
 
-          //   this.errorS.reiniciaErrores();
-          //   console.log('los errores de la sesion tras reiniciar',this.errorS.getCantidadErrores());
-          //   console.log("la cantidad de errores a resrtar ", cantidadErrores);
-          // }
 console.log("la cantidad de errores es ", cantidadErrores);
 //console.log('el numero de minuto',this.numeroMin, 'el numero de errores', cantidadErrores);
           //console.log(this.numeroMin);
@@ -180,14 +168,28 @@ console.log("la cantidad de errores es ", cantidadErrores);
           //console.log(this.minutos);
           this.segundos = ('0'+Math.floor(tiempoRestante% ((1000*60))/(1000))).slice(-2);
 
+          if(this.minutos<='60'){
+            this.imagenMinion='../../assets/principal.jpg'
+          }
+          if(this.minutos<='50'){
+            this.imagenMinion='../../assets/portada.jpg';
+          }
+          if(this.minutos<='40'){
+            this.imagenMinion='../../assets/peleaMinionsPlatano.jpg';
+          }
+           if(this.minutos<='30'){
+            this.imagenMinion='../../assets/minionmorado.jpg';
+          }
+          if(this.minutos<='20'){
+            this.imagenMinion='../../assets/minionEnfadadoPersiguiendo.jpg';
+          }
 
-
-          if (this.minutos<'42'){
-            this.imagenMinion='../assets/minionmorado.jpg';
+          if (this.minutos<'12'){
+            this.imagenMinion='../../assets/botonPanico.jpg';
             //console.log("el tiempo pasa...");
           }else{
             //console.log("el tiempo pasa...")
-            this.imagenMinion='';
+            // this.imagenMinion='';
           }
           if(this.segundos<'40' && this.minutos<'42'){
             //console.log("menos de 40 segundos y 42 min");
@@ -195,13 +197,14 @@ console.log("la cantidad de errores es ", cantidadErrores);
           }
          }
          //console.log("los minutos actuales", this.minutos);
-
+         console.log("la imagen minion ruta",this.imagenMinion);
           this.reloj= {
             hora: this.horas,
             minuto:this.minutos,
             segundo: this.segundos,
             milisegundo: this.milisegundos,
-            errores: cantidadErrores
+            errores: cantidadErrores,
+            imagenMinion: this.imagenMinion
           };
 
           // //console.log(this.reloj)

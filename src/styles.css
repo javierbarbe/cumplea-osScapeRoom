@@ -18,3 +18,16 @@ body{
   .reloj{
     margin: auto;
   }
+
+  .alerta{
+animation: parpadeo infinite linear 1s alternate;
+  }
+
+  @keyframes parpadeo{
+    from{
+opacity: 100;
+    }
+    to{
+opacity: 0;
+    }
+  }

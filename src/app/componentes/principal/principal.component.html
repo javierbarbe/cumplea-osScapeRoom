@@ -1,9 +1,19 @@
 <p>principal works!</p>
-<div *ngIf="iniciado ;else elseTemplate" >
-  <!-- <button  class="btn btn-block btn-danger disabled " id="botonIniciar" >Iniciar</button> -->
-
+<div class="d-flex align-content-center justify-content-center" style="flex-direction: column;">
+  <div class="  d-none"  id="prueba1">
+    <button  (click)="prueba1()" class=" btn btn-info w-100">Enlace a primera prueba</button>
+  </div>
+  <br>
+  <div id="prueba2" class="d-none">
+    <button  (click)="prueba2()" class=" btn btn-info w-100">Enlace a segudnda prueba</button>
+  </div>
+  <button id="prueba3" (click)="prueba3()" class="d-none btn">Enlace a tercera prueba</button>
 </div>
-<ng-template #elseTemplate>
+
+
+
   <button (click)="iniciar()" class="btn  w-100 btn-danger " id="botonIniciar" >Iniciar</button>
 
-</ng-template>
+
+
+
